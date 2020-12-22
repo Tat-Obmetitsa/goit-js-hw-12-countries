@@ -1,7 +1,7 @@
-import '../css/styles.css';
-import API from './api-service';
+import API from './api-service.js';
 import getRefs from './get-refs';
 import countryCardTpl from '../templates/country-card.hbs';
+
 const refs = getRefs();
 refs.searchForm.addEventListener('submit', onSearch);
 function onSearch(e) {
@@ -23,3 +23,4 @@ function renderCountryCard(country) {
 function onFetchError(error) {
   alert('Упс, что-то пошло не так и мы не нашли такую страну!');
 }
+

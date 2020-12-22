@@ -10,7 +10,10 @@ body {
   line-height: 1.5;
   color: #2a2a2a;
 }
-
+a {
+  color: currentColor;
+  text-decoration: none;
+}
 img {
   display: block;
   max-width: 100%;
@@ -37,4 +40,73 @@ img {
 
 .card {
   margin: 10px;
+}
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.form-control {
+  padding: 15px 28px 16px 28px;
+  background-color: transparent;
+  border: 2px solid #ff0081;
+  box-sizing: border-box;
+  color: #800080;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  text-align: center;
+}
+.form-group {
+  margin-right: 50px;
+}
+.form-control:focus {
+    border: 1px solid #800080;
+    outline: 2px solid #800080;
+}
+.btn {
+  background: #ff0081;
+	padding: 1em 2em;
+	border: none;
+	color: white;
+	outline: none;
+	overflow: hidden;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+.btn:hover{
+   background: radial-gradient(circle, #800080, transparent);
+
+}
+.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  padding: 10px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 150px;
+  border: 2px solid transparent;
+  background: radial-gradient(circle, #ff0081, transparent);
+  border-radius: 50px;
+  color: white;
+}
+.main-page:hover {
+  color: #800080;
+  border: 2px solid #ff0081;
+  background: radial-gradient(circle, #f3dbe7, transparent);
 }
