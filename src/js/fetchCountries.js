@@ -15,7 +15,7 @@ defaults.autoOpen = false;
 
 const refs = getRefs();
 refs.searchForm.addEventListener('submit', onSearch);
-refs.searchForm.addEventListener('input', debounce(onSearch, 500));
+// refs.searchForm.addEventListener('input', debounce(onSearch, 500));
 
 function onSearch(e) {
   e.preventDefault();
