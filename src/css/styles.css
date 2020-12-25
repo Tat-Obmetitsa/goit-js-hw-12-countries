@@ -9,6 +9,7 @@ body {
     Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.5;
   color: #2a2a2a;
+  background-color: #e0dbe0;
 }
 a {
   color: currentColor;
@@ -19,7 +20,16 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+h1, h2, h3 {
+  margin: 0;
+}
+li {
+    list-style-type: none; 
+}
+ul {
+    margin-left: 0;
+    padding-left: 0;
+}
 .card {
   width: 288px;
 }
@@ -33,7 +43,24 @@ img {
   display: flex;
   justify-content: center;
 }
-
+.js-card-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 1em;
+  background-color: inherit;
+}
+.country__img {
+  display: block;
+  width: 200px;
+}
 .search-form {
   padding: 10px;
 }
@@ -59,32 +86,14 @@ img {
   letter-spacing: 0.08em;
   cursor: pointer;
   text-align: center;
+  background-color: #fff;
 }
-.form-group {
-  margin-right: 50px;
-}
+
 .form-control:focus {
     border: 1px solid #800080;
     outline: 2px solid #800080;
 }
-.btn {
-  background: #ff0081;
-	padding: 1em 2em;
-	border: none;
-	color: white;
-	outline: none;
-	overflow: hidden;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0.08em;
-  cursor: pointer;
-}
-.btn:hover{
-   background: radial-gradient(circle, #800080, transparent);
 
-}
 .main-page {
   display: flex;
   justify-content: center;
