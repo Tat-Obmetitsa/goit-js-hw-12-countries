@@ -3,6 +3,8 @@ import getRefs from './get-refs';
 import countriesTpl from '../templates/countries-list.hbs';
 import countryTpl from '../templates/country-card.hbs';
 
+import debounce from 'lodash.debounce';
+
 import '@pnotify/core/dist/BrightTheme.css';
 import { defaults } from '@pnotify/core';
 const { error } = require('@pnotify/core');
@@ -13,8 +15,6 @@ defaults.delay = '500';
 defaults.closer = false;
 defaults.sticker = false;
 
-
-const debounce = require('lodash.debounce');
 const refs = getRefs();
 refs.searchForm.addEventListener('input', debounce(onSearch, 500));
 
@@ -24,6 +24,9 @@ function onSearch(evt) {
 
   const searchQuery = evt.target.value;
   API.fetchCountries(searchQuery).then(renderedCard).catch(onFetchError);
+  if (!searchQuery) {
+    return;
+  }
 }
 function renderedCard(countries) {
   if (countries.length > 10) {
